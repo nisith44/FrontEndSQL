@@ -3,6 +3,21 @@ How To Run SQL Query in Frontend (React, Angular, Vue, Ionic). You can just run 
 
 This is light weight Node.js Express backend application (2mb) you can pass the sql query in the request body
 
+# Demo
+This is Demo Endpoint
+``` http://frontendsql.okkomameke.com/sql/select ```
+
+```js
+const axios = require('axios');
+
+axios.post('http://frontendsql.okkomameke.com/sql/select', {
+    sql: 'SELECT * FROM food;',
+})
+.then(function (response) {
+    console.log(response);
+})
+```
+
 ## How it works
 ### How to run SQL query in React application
 
@@ -52,8 +67,11 @@ const pool= mysql.createPool({
 module.exports = pool;
 ```
 
-### 3.Run the Node project
+### 3. Run the Node project
 ``` npm start ```
+
+### 4. Test with Your frontend
+<br/><br/>
 
 # API Enpoints
 ### Run SQL SELECT Queries in Frontend
